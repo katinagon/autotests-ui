@@ -33,3 +33,21 @@ class TestCourses:
         courses_list_page.course_view.check_visible(
             0, "Playwright", "100", "10", "2 weeks"
         )
+
+    def test_edit_course(self, create_course_page: CreateCoursePage, courses_list_page: CoursesListPage):
+        create_course_page.visit('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create')
+        create_course_page.create_course_form.fill("UI Tests", "3 weeks", "UI Tests", "70", "20")
+        create_course_page.image_upload_widget.upload_preview_image('./testdata/files/image.png')
+        create_course_page.create_course_toolbar_view.click_create_course_button()
+
+        courses_list_page.course_view.check_visible(0, "UI Tests", "70", "20", "3 weeks")
+
+        courses_list_page.course_view.menu.click_edit(0)
+        create_course_page.create_course_form.fill("API Tests ", "1 week", "API Tests", "50", "15")
+        create_course_page.create_course_toolbar_view.click_create_course_button()
+
+        courses_list_page.course_view.check_visible(0, "API Tests", "50", "15", "1 week")
+
+
+
+
