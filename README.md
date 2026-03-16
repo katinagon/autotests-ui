@@ -18,8 +18,8 @@
 Для начала работы склонируйте репозиторий проекта с помощью Git:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/katinagon/autotests-ui.git
+cd autotests-ui
 ```
 
 ### Создание виртуального окружения
