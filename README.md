@@ -1,4 +1,4 @@
-# UI Course Automation Tests
+# UI-автотесты для приложения UI Course
 
 Этот проект реализует автоматизированные тесты для
 [тестового приложения UI Course](https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login). Тесты написаны с
